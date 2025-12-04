@@ -1,0 +1,209 @@
+✅ PERFECT LANDING PAGE GENERATION PROMPT (Copy-Paste & Use Directly)
+
+Prompt Start ⬇️
+
+I want you to design and generate a complete, professional, mobile-responsive landing page for:
+
+Balaji Benchmark Consultants (BBMC)
+
+Architects | Engineers | Vaasthu Consultants | Interior Designers | Builders | Developers
+
+Use the exact color theme from this logo:
+Blue (#009FE3), Grey (#B8B8B8), Black (#111111), White (#FFFFFF)
+Logo Image: Use the styling and theme of the image I provided
+
+▶ ABOUT THE COMPANY
+
+Balaji Benchmark Consultants (BBMC) is a Hyderabad-based firm offering end-to-end services in architecture, engineering, interior design, vasthu consulting, construction, and building planning.
+
+They are known for:
+
+Over 30 years of expertise
+
+High-quality construction
+
+Creative planning
+
+Strong focus on Vasthu-compliant designs
+
+Commercial & independent property expertise
+
+Contact: +91 93910 36765
+Email: bbmcconsultants@gmail.com
+
+Location:
+Plot No.12, Street No.1, Srinagar Colony, Adjacent lane to Universe Bakery, Near Ambedkar statue, Boduppal, Hyderabad, Telangana, India – 500092
+
+Social & Business Profiles:
+Google Maps: https://g.co/kgs/AV6cZnM
+
+Google Reviews:
+https://www.google.com/maps/contrib/109661501572418529900/reviews
+
+https://www.google.com/maps/contrib/101503959323719359065/reviews
+
+https://www.google.com/maps/contrib/111176672038646666782/reviews
+
+https://www.google.com/maps/contrib/104086729619258785296/reviews
+
+https://www.google.com/maps/contrib/108497517971035711337/reviews
+
+Instagram: https://www.instagram.com/srinivasguptapaspunoori_bbmc/profile
+
+YouTube: https://www.youtube.com/@bbmcconsultants
+
+Justdial:
+https://www.justdial.com/Rangareddy/Balaji-Benchmark-Consultants-BBMC-Beside-Lane-To-Universe-Bakary-Nearambedhkar-Statue-Sri-Nagar-Colony-Boduppal/040PXX40-XX40-110122115547-F8N3_BZDET
+
+▶ WEBSITE STRUCTURE REQUIREMENTS
+
+Build a clean, modern, premium landing page with the following sections:
+
+1️⃣ Hero Section
+
+Background inspired by architecture/interior design theme
+
+Use logo colors
+
+Headline: “Designing Dreams. Building Excellence.”
+
+Sub-heading: Professional Architects, Engineers, Interior Designers, Vaasthu Experts, and Builders
+
+Contact CTA buttons:
+
+Call Now (+91 93910 36765)
+
+Get a Consultation
+
+WhatsApp Icon + Text
+
+2️⃣ About BBMC
+
+Highlight:
+
+30+ years of experience
+
+Known for Vaasthu-compliant plans
+
+Delivered landmark residential & commercial projects
+
+Professional, experienced, and client-trusted
+
+Include short paragraph describing the firm professionally.
+
+3️⃣ Services Section
+
+List with icons:
+
+Architectural & Engineering Design
+
+Structural Engineering
+
+Interior Design & Space Planning
+
+Vaasthu Consultation
+
+Construction & Renovation
+
+Estimates & Valuations (Bank approved)
+
+Land Surveying & Plot Development
+
+4️⃣ Project Portfolio Section
+
+Categories:
+
+Residential
+
+Independent Houses
+
+Villas
+
+Duplex / Triplex
+
+Apartments
+
+Commercial
+
+Schools / Colleges
+
+Hospitals
+
+Restaurants
+
+Shopping Complexes
+
+Use elegant grid layout.
+
+5️⃣ Why Choose BBMC (USP Section)
+
+Tailor-made designs
+
+100% Vaasthu compliance
+
+Bank loan estimate support
+
+Transparent & client-first approach
+
+Quality and timely delivery
+
+Include minimal icons for each point.
+
+6️⃣ Testimonials (Use Google Review Highlights)
+
+Add 3–5 reviews summarizing professionalism & creative planning.
+(no real names required)
+
+7️⃣ Contact Section
+
+Show:
+
+Phone
+
+Email
+
+Google Maps embed of location
+
+Address with landmark clearly shown
+
+WhatsApp quick chat button
+
+8️⃣ Footer
+
+Logo
+
+Quick links
+
+Social media icons
+
+Copyright © BBMC 2025
+
+▶ DESIGN STYLE
+
+Modern architecture-style shapes
+
+Grey background patterns like the logo
+
+Blue accents for highlights
+
+Professional fonts:
+
+Headings: Montserrat / Poppins
+
+Body: Inter / Roboto
+
+▶ OUTPUT FORMAT
+
+Deliver:
+
+Complete landing page code (HTML + CSS + JS)
+OR (if the platform supports components)
+
+Fully generated section-by-section components
+OR
+
+A published landing page preview (if the tool supports auto-deploy)
+
+Ensure everything is consistent with the brand identity of BBMC.
+
+Prompt End ⬆️
