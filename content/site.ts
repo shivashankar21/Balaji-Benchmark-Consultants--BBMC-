@@ -1,0 +1,99 @@
+// Single source of truth for business details (NAP). Keep identical to Google Business Profile.
+
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://balaji-benchmark-consultants-bbmc.onrender.com").replace(/\/$/, "");
+
+export const site = {
+  name: "Balaji Benchmark Consultants",
+  shortName: "BBMC",
+  legalName: "Balaji Benchmark Consultants (BBMC)",
+  tagline: "Designing Dreams. Building Excellence.",
+  roles: "Architects | Engineers | Vaasthu Consultants | Interior Designers | Builders | Developers",
+  foundingYear: 1995,
+  founder: {
+    name: "Er. Paspunoori Srinivas Gupta",
+    role: "Founder & Managing Director",
+    subRole: "Principal Consultant, BBMC Balaji Benchmark Consultants",
+    image: "/img/er-paspunoori-srinivas-gupta-founder-bbmc.webp",
+  },
+  phones: [
+    { display: "+91 93910 36765", tel: "+919391036765" },
+    { display: "+91 96429 81899", tel: "+919642981899" },
+  ],
+  email: "bbmcconsultants@gmail.com",
+  whatsapp: "919391036765",
+  whatsappText: "Hi BBMC, I would like to inquire about your services.",
+  hours: {
+    display: "Mon - Sun: 9:00 AM - 10:00 PM",
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "09:00",
+    closes: "22:00",
+  },
+  address: {
+    lines: [
+      "Plot No.12, Street No.1, Srinagar Colony,",
+      "Adjacent lane to Universe Bakery,",
+      "Near Ambedkar Statue, Boduppal,",
+      "Hyderabad, Telangana - 500092",
+    ],
+    street: "Plot No.12, Street No.1, Srinagar Colony, Adjacent lane to Universe Bakery, Near Ambedkar Statue",
+    locality: "Boduppal",
+    city: "Hyderabad",
+    region: "Telangana",
+    postalCode: "500092",
+    country: "IN",
+  },
+  geo: { lat: 17.4175222, lng: 78.5851395 },
+  mapsUrl: "https://maps.app.goo.gl/VeRk9wKnZJkvT1kF6",
+  // Google icon in footer/contact opens BBMC's Google search results (business panel + reviews)
+  googleSearch: "https://www.google.com/search?q=bbmc+consultants+boduppal",
+  // Direct Maps embed URL (the old ?output=embed link redirects, which breaks inside an iframe)
+  mapsEmbed: "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s17.4175222,78.5851395!6i17",
+  social: {
+    facebook: "https://www.facebook.com/share/1BThqWfbeZ/",
+    instagram: "https://www.instagram.com/srinivasguptapaspunoori_bbmc/",
+    youtube: "https://www.youtube.com/@bbmcconsultants",
+  },
+  // Where BBMC is listed online. `sameAs: true` = BBMC's own profile, added to the structured data Google reads.
+  listings: [
+    { label: "Google Maps", href: "https://maps.app.goo.gl/VeRk9wKnZJkvT1kF6", sameAs: true },
+    { label: "Justdial", href: "https://www.justdial.com/Rangareddy/Bbmc-Balaji-Benchmark-Consultants-Beside-Lane-To-Universe-Bakary-Nearambedhkar-Statue-Sri-Nagar-Colony-Boduppal/040PXX40-XX40-110122115547-F8N3_BZDET", sameAs: true },
+    { label: "Facebook", href: "https://www.facebook.com/share/1BThqWfbeZ/", sameAs: true },
+    { label: "Instagram", href: "https://www.instagram.com/srinivasguptapaspunoori_bbmc/", sameAs: true },
+    { label: "YouTube", href: "https://www.youtube.com/@bbmcconsultants", sameAs: true },
+    { label: "Wheree", href: "https://balaji-benchmark-consultants.wheree.com/", sameAs: true },
+    { label: "Glassy", href: "https://glassy.in/glass-business/balaji-benchmark-consultants-bbmc-architects-engineers-vaasthu-experts-interior-designers-and-builders-saraswati-nagar-colony/", sameAs: true },
+    { label: "BBMC Benchmark Constructions on LinkedIn", href: "https://in.linkedin.com/company/bbmc-benchmark-constructions-pvt-%C2%A0ltd", sameAs: false },
+    { label: "BBMC Balaji Benchmark Constructions on Justdial", href: "https://www.justdial.com/Rangareddy/Bbmc-Balaji-Benchmark-Constructions-Pvt-Ltd-Near-Ambedkar-Statue-Adjacent-To-Lane-To-Universe-Bakery-Boduppal/040PXX40-XX40-230304143534-G3B5_BZDET", sameAs: false },
+  ],
+  logo: "/img/bbmc-logo.png",
+  // Original stat text kept: "30+ Years of Excellence", "Vaasthu Compliant Designs", "3000+ Happy Clients", "500+ Projects Delivered".
+  stats: [
+    { count: 30, suffix: "+", unit: "Years", label: "of Excellence" },
+    { count: 100, suffix: "%", unit: "Vaasthu Compliant", label: "Designs" },
+    { count: 3000, suffix: "+", unit: "", label: "Happy Clients" },
+    { count: 500, suffix: "+", unit: "", label: "Projects Delivered" },
+  ],
+  areasServed: ["Hyderabad", "Secunderabad", "Telangana"],
+};
+
+export const whatsappLink = (text: string = site.whatsappText) =>
+  `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
+
+export const nav = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Locations", href: "/locations" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/#contact" },
+];
+
+// Shared social-preview image (generated by app/opengraph-image.tsx). Page-level openGraph
+// settings replace the inherited one, so every page passes this explicitly.
+export const defaultOgImage = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "BBMC – Architects, Engineers & Vaasthu Consultants in Hyderabad & Telangana",
+};
