@@ -24,12 +24,19 @@ export default function ServicesPage() {
         title="One firm for design, engineering and construction"
         paragraphs={[
           "Most building projects involve an architect, a structural engineer, a Vaasthu consultant, an interior designer and a contractor, often from different firms. Every handover between them is a chance for mistakes, delays and extra cost. At BBMC all of these work together under one roof, led by Er. Paspunoori Srinivas Gupta, who founded the firm in 1995.",
+          "Over three decades we have delivered almost every kind of building: independent houses and villas, apartments, gated villa projects and whole residential colonies, schools, large convention halls, hospitals, restaurants, and commercial and industrial buildings.",
           "You can engage us for the complete project, from plot selection and plans to construction and interiors, or for a single service such as a Vaasthu review, an elevation, a bank estimate or structural drawings. Either way, you work with one team that understands the whole building.",
         ]}
         list={[
           "Homes: independent houses, duplexes, villas and G+1 to G+5 buildings",
-          "Commercial: shops, offices, showrooms, complexes and convention halls",
-          "Institutional and industrial buildings",
+          "Apartments and residential towers",
+          "Gated villa projects and complete residential colonies",
+          "Schools: buildings delivered for many school clients",
+          "Convention halls and function halls, including large convention halls",
+          "Hospitals and healthcare buildings",
+          "Restaurants and cafes",
+          "Commercial: shops, offices, showrooms and commercial complexes",
+          "Industrial buildings",
           "Interiors for homes, offices, cafes and restaurants",
         ]}
       />
