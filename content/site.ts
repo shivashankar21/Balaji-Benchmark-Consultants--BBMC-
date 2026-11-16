@@ -57,6 +57,7 @@ export const site = {
   listings: [
     { label: "Google Maps", href: "https://maps.app.goo.gl/VeRk9wKnZJkvT1kF6", sameAs: true },
     { label: "Justdial", href: "https://www.justdial.com/Rangareddy/Bbmc-Balaji-Benchmark-Consultants-Beside-Lane-To-Universe-Bakary-Nearambedhkar-Statue-Sri-Nagar-Colony-Boduppal/040PXX40-XX40-110122115547-F8N3_BZDET", sameAs: true },
+    { label: "magicpin", href: "https://magicpin.in/East-Brundavan-Colony/East-Brundavan-Colony/Other/Balaji-Benchmark-Consultants/store/3246cc1", sameAs: true },
     { label: "Facebook", href: "https://www.facebook.com/share/1BThqWfbeZ/", sameAs: true },
     { label: "Instagram", href: "https://www.instagram.com/srinivasguptapaspunoori_bbmc/", sameAs: true },
     { label: "YouTube", href: "https://www.youtube.com/@bbmcconsultants", sameAs: true },
@@ -67,12 +68,12 @@ export const site = {
   ],
   logo: "/img/bbmc-logo.png",
   logoSmall: "/img/bbmc-logo-240.webp", // header/footer (18 KB instead of 490 KB)
-  // Original stat text kept: "30+ Years of Excellence", "Vaasthu Compliant Designs", "3000+ Happy Clients", "500+ Projects Delivered".
+  // Original stat text kept: "30+ Years of Excellence", "Vaasthu Compliant Designs", "5000+ Happy Clients", "1500+ Projects Delivered".
   stats: [
     { count: 30, suffix: "+", unit: "Years", label: "of Excellence" },
     { count: 100, suffix: "%", unit: "Vaasthu Compliant", label: "Designs" },
-    { count: 3000, suffix: "+", unit: "", label: "Happy Clients" },
-    { count: 500, suffix: "+", unit: "", label: "Projects Delivered" },
+    { count: 5000, suffix: "+", unit: "", label: "Happy Clients" },
+    { count: 1500, suffix: "+", unit: "", label: "Projects Delivered" },
   ],
   areasServed: ["Hyderabad", "Secunderabad", "Telangana"],
 };

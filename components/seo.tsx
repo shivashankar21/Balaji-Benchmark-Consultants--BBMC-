@@ -26,7 +26,7 @@ export function businessSchema() {
     description:
       "Architects, structural engineers, interior designers, Vaasthu (vastu) consultants, builders and developers in Hyderabad & Telangana since 1995.",
     url: SITE_URL,
-    logo: `${SITE_URL}/icon.png`,
+    logo: `${SITE_URL}${site.logo}`,
     image: `${SITE_URL}/img/services/architects-hyderabad-hero.webp`,
     telephone: site.phones[0].tel,
     email: site.email,
@@ -64,8 +64,9 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
-    url: SITE_URL,
-    name: "BBMC – Balaji Benchmark Consultants",
+    url: `${SITE_URL}/`,
+    name: "Balaji Benchmark Consultants",
+    alternateName: ["BBMC", "BBMC Consultants", "BBMC Balaji Benchmark Consultants"],
     publisher: { "@id": businessId },
     inLanguage: "en-IN",
   };

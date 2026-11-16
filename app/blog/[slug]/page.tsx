@@ -6,6 +6,8 @@ import { JsonLd } from "@/components/seo";
 import { Container, CtaBand } from "@/components/ui";
 import { getPost, posts } from "@/content/blog";
 import { SITE_URL } from "@/content/site";
+import Link from "next/link";
+import { getService } from "@/content/services";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -29,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PostPage({ params }: Props) {
   const p = getPost((await params).slug);
   if (!p) notFound();
+  const svc = p.service ? getService(p.service) : undefined;
 
   return (
     <>
@@ -52,6 +55,13 @@ export default async function PostPage({ params }: Props) {
               </section>
             ))}
           </div>
+          {svc && (
+            <aside className="mt-14 rounded-2xl border border-line bg-mist p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Related service</p>
+              <Link href={`/services/${svc.slug}`} className="mt-2 block font-display text-xl font-bold text-ink hover:text-brand-700">{svc.title} →</Link>
+              <p className="mt-2 text-ink-60">{svc.short}</p>
+            </aside>
+          )}
         </Container>
       </article>
       <CtaBand />

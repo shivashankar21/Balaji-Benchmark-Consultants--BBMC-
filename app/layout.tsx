@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import RevealObserver from "@/components/RevealObserver";
+import HashScroll from "@/components/HashScroll";
 import { JsonLd, businessSchema, websiteSchema } from "@/components/seo";
 import { SITE_URL, defaultOgImage } from "@/content/site";
 import "./globals.css";
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "BBMC, since 1995: builders, architects, structural engineers, interior designers & vastu consultants in Hyderabad & Telangana. 500+ projects.",
-  applicationName: "BBMC – Balaji Benchmark Consultants",
+    "BBMC, since 1995: builders, architects, structural engineers, interior designers & vastu consultants in Hyderabad & Telangana. 1500+ projects.",
+  applicationName: "Balaji Benchmark Consultants",
   authors: [{ name: "Balaji Benchmark Consultants (BBMC)" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "BBMC – Balaji Benchmark Consultants",
+    siteName: "Balaji Benchmark Consultants",
     images: [defaultOgImage],
   },
   twitter: { card: "summary_large_image" },
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FloatingActions />
         <RevealObserver />
+        <HashScroll />
         <JsonLd data={businessSchema()} />
         <JsonLd data={websiteSchema()} />
       </body>

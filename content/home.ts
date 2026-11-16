@@ -83,7 +83,7 @@ export const founder = {
     "Under his leadership, BBMC has transformed ideas into iconic homes, campuses, and commercial landmarks across Telangana. His commitment to Vaasthu-compliant designs, customer satisfaction, and excellence has made BBMC a trusted name in the construction industry.",
     "Er. Gupta's hands-on approach and deep understanding of both traditional principles and modern engineering techniques ensure that every project receives the personalized attention it deserves.",
   ],
-  badges: ["30+ Years Experience", "Since 1995", "Vaasthu Expert", "3000+ Happy Clients"],
+  badges: ["30+ Years Experience", "Since 1995", "Vaasthu Expert", "5000+ Happy Clients"],
 };
 
 export const testimonialsIntro = {
@@ -184,5 +184,5 @@ export const homeFaqs = [
   { q: "Do you provide bank loan estimates?",
     a: "Yes, we provide bank-approved estimates and valuations to help secure your project financing." },
   { q: "How long has BBMC been in business?",
-    a: "BBMC was founded in 1995 by Er. Paspunoori Srinivas Gupta and has 30+ years of experience, 500+ projects delivered and 3000+ happy clients." },
+    a: "BBMC was founded in 1995 by Er. Paspunoori Srinivas Gupta and has 30+ years of experience, 1500+ projects delivered and 5000+ happy clients." },
 ];

@@ -31,7 +31,7 @@ export const services: Service[] = [
     imageAlt: "Architect at BBMC preparing a vastu-compliant house plan in Hyderabad",
     intro: [
       "BBMC has been designing homes, apartments, commercial complexes and institutional buildings across Hyderabad since 1995. Every plan starts with your plot, your budget and the way your family or business actually uses space, and is then refined for light, ventilation, structure and Vaasthu.",
-      "We work on independent houses, duplex and triplex homes, G+1 to G+5 residential buildings, villas, apartments, shops, offices, convention halls and mixed-use complexes. Plans are prepared for every plot size and facing, including 30x40, 30x50, 40x60 and larger layouts.",
+      "We work on independent houses, duplex and triplex homes, G+1 to G+5 residential buildings, villas, gated villa projects and complete residential colonies, apartments, schools, convention halls, hospitals, restaurants, shops, offices and mixed-use complexes. Plans are prepared for every plot size and facing, including 30x40, 30x50, 40x60 and larger layouts.",
     ],
     includes: [
       "Site visit and plot analysis (facing, road width, setbacks)",
@@ -56,7 +56,7 @@ export const services: Service[] = [
       },
       {
         q: "Can you design both residential and commercial buildings?",
-        a: "Yes. Our work includes independent houses, villas, apartments, commercial complexes, offices, convention halls and mixed-use buildings.",
+        a: "Yes. Our work includes independent houses, villas, gated villa projects and residential colonies, apartments, schools, convention halls, hospitals, restaurants, commercial complexes, offices and mixed-use buildings.",
       },
       {
         q: "Will the plan follow Vaasthu?",
@@ -287,7 +287,7 @@ export const services: Service[] = [
       },
       {
         q: "What kind of projects have you developed?",
-        a: "Our portfolio includes apartment complexes, residential towers, commercial complexes, convention halls and mixed-use buildings.",
+        a: "Our portfolio includes apartment complexes, residential towers, gated villa projects, complete residential colonies, schools, convention halls, hospitals, commercial complexes and mixed-use buildings.",
       },
     ],
     related: ["construction-renovation", "architectural-design", "land-surveying-plot-development"],
@@ -300,8 +300,8 @@ export const services: Service[] = [
     metaDescription:
       "Bank-approved construction estimates and property valuations across Hyderabad & Telangana for home loans and project financing. BBMC since 1995.",
     h1: "Bank Loan Estimates & Property Valuations in Hyderabad",
-    image: "/img/services/architects-hyderabad-hero.webp",
-    imageAlt: "Building estimate and valuation documents prepared by BBMC",
+    image: "/img/projects/commercial-complex-with-retail.webp",
+    imageAlt: "Commercial complex with retail frontage, valued and estimated by BBMC engineers in Hyderabad",
     intro: [
       "Most banks need a professional construction estimate before sanctioning a home or construction loan. BBMC prepares clear, bank-approved estimates and property valuations to help secure your project financing.",
       "Because our estimates come from the same team that designs and engineers buildings, they are realistic, detailed and easy for both you and your bank to understand.",
