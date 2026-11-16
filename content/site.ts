@@ -57,6 +57,7 @@ export const site = {
   listings: [
     { label: "Google Maps", href: "https://maps.app.goo.gl/VeRk9wKnZJkvT1kF6", sameAs: true },
     { label: "Justdial", href: "https://www.justdial.com/Rangareddy/Bbmc-Balaji-Benchmark-Consultants-Beside-Lane-To-Universe-Bakary-Nearambedhkar-Statue-Sri-Nagar-Colony-Boduppal/040PXX40-XX40-110122115547-F8N3_BZDET", sameAs: true },
+    { label: "magicpin", href: "https://magicpin.in/East-Brundavan-Colony/East-Brundavan-Colony/Other/Balaji-Benchmark-Consultants/store/3246cc1", sameAs: true },
     { label: "Facebook", href: "https://www.facebook.com/share/1BThqWfbeZ/", sameAs: true },
     { label: "Instagram", href: "https://www.instagram.com/srinivasguptapaspunoori_bbmc/", sameAs: true },
     { label: "YouTube", href: "https://www.youtube.com/@bbmcconsultants", sameAs: true },

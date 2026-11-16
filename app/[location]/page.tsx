@@ -50,7 +50,7 @@ const searchGroups = (name: string): { title: string; items: [string, string][] 
     title: "Architecture & engineering",
     items: [
       [`Architects in ${name}`, "architectural-design"],
-      [`Civil engineers in ${name}`, "structural-engineering"],
+      [`Civil engineers in ${name}`, "#civil-engineers"],
       [`Structural engineer in ${name}`, "structural-engineering"],
       [`Building planners in ${name}`, "architectural-design"],
       [`House plans in ${name}`, "architectural-design"],
@@ -61,9 +61,9 @@ const searchGroups = (name: string): { title: string; items: [string, string][] 
   {
     title: "Vastu & interiors",
     items: [
-      [`Vastu consultant in ${name}`, "vastu-consultation"],
+      [`Vastu consultant in ${name}`, "#vastu-consultants"],
       [`Vastu expert in ${name}`, "vastu-consultation"],
-      [`Interior designers in ${name}`, "interior-design"],
+      [`Interior designers in ${name}`, "#interior-designers"],
       [`Home interiors in ${name}`, "interior-design"],
       [`Modular kitchen in ${name}`, "interior-design"],
     ],
@@ -78,6 +78,32 @@ const searchGroups = (name: string): { title: string; items: [string, string][] 
       [`Land surveyors in ${name}`, "land-surveying-plot-development"],
       [`Plot surveyors in ${name}`, "land-surveying-plot-development"],
     ],
+  },
+];
+
+// Civil engineers, vastu consultants and interior designers get their own section on each area page,
+// so one strong page per area covers those searches (instead of many near-identical pages).
+const specialists = (name: string) => [
+  {
+    id: "civil-engineers",
+    title: `Civil engineers in ${name}`,
+    slug: "structural-engineering",
+    text: `Our civil and structural engineers design the foundations, columns, beams and slabs for houses and buildings in ${name}, prepare clear drawings for your site team and check the reinforcement before concreting.`,
+    points: ["RCC design and structural drawings", "Checks before adding floors", "Structural stability assessment", "Site supervision at key stages"],
+  },
+  {
+    id: "vastu-consultants",
+    title: `Vastu consultants in ${name}`,
+    slug: "vastu-consultation",
+    text: `Er. Paspunoori Srinivas Gupta and the BBMC team have advised on Vaasthu for over 30 years: plots before you buy in ${name}, plans before construction, and corrections for existing homes, flats and shops, often without demolition.`,
+    points: ["Plot Vastu before purchase", "East, west, north & south facing plans", "Vastu for flats, shops and offices", "Corrections without demolition"],
+  },
+  {
+    id: "interior-designers",
+    title: `Interior designers in ${name}`,
+    slug: "interior-design",
+    text: `We design interiors for flats, houses, villas, offices and cafes in ${name}, planning layout, materials, lighting and storage together, with 3D views before work starts and supervision through to handover.`,
+    points: ["Space planning and furniture layouts", "Modular kitchens and wardrobes", "False ceiling and lighting", "Office, cafe and restaurant interiors"],
   },
 ];
 
@@ -207,6 +233,45 @@ export default async function LocationPage({ params }: Props) {
         </section>
       )}
 
+      {/* ---------- Civil engineers, vastu consultants & interior designers ---------- */}
+      <section className="pb-20 lg:pb-24">
+        <Container>
+          <div className="max-w-2xl" data-reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Specialists in {name}</p>
+            <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">Civil engineers, vastu consultants &amp; interior designers in {name}</h2>
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {specialists(name).map((sp, i) => {
+              const svc = services.find((x) => x.slug === sp.slug)!;
+              return (
+                <article key={sp.id} id={sp.id} className="flex scroll-mt-24 flex-col overflow-hidden rounded-xl border border-line bg-white" data-reveal style={{ ["--reveal-delay" as string]: `${i * 80}ms` }}>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-mist">
+                    <Image quality={90} src={svc.image} alt={`${sp.title}, Hyderabad by BBMC`} fill sizes="(min-width:1024px) 33vw, 100vw" className="object-cover" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-display text-xl font-semibold text-ink">{sp.title}</h3>
+                    <p className="mt-3 leading-relaxed text-ink-60">{sp.text}</p>
+                    <ul className="mt-5 flex-1 space-y-2">
+                      {sp.points.map((pt) => (
+                        <li key={pt} className="flex gap-3 text-sm text-ink-80">
+                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700">
+                            <Check className="h-3 w-3" aria-hidden="true" />
+                          </span>
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href={`/services/${sp.slug}`} className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+                      More about {svc.title.toLowerCase()} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
       {/* ---------- Services ---------- */}
       <section className="bg-mist py-20 lg:py-24">
         <Container>
@@ -275,7 +340,7 @@ export default async function LocationPage({ params }: Props) {
                   <ul className="mt-3 space-y-2 text-sm">
                     {g.items.map(([label, slug]) => (
                       <li key={label}>
-                        <Link href={`/services/${slug}`} className="link-underline text-ink-60 hover:text-brand-700">{label}</Link>
+                        <Link href={slug.startsWith("#") ? slug : `/services/${slug}`} className="link-underline text-ink-60 hover:text-brand-700">{label}</Link>
                       </li>
                     ))}
                   </ul>
