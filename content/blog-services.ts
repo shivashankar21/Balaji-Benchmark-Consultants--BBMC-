@@ -8,7 +8,7 @@ export const servicePosts: Post[] = [
     description:
       "A structural engineer's checklist for steel cutting, bending and fixing: drawings, BBS, cover, laps, stirrups, beam-column joints and the pre-concreting inspection.",
     date: "2026-11-17",
-    image: "/img/services/structural-engineering.webp",
+    image: "/img/blog/bar-bending-reinforcement-checks.webp",
     service: "structural-engineering",
     sections: [
       {
@@ -120,7 +120,7 @@ export const servicePosts: Post[] = [
     description:
       "How to get the most out of a 30x40 (1200 sq ft) plot in Hyderabad: setbacks, G+1 vs duplex, staircase and parking, Vaasthu by facing, and planning for future floors.",
     date: "2026-11-17",
-    image: "/img/services/architectural-design.webp",
+    image: "/img/projects/minimalist-residential-building.webp",
     service: "architectural-design",
     sections: [
       {
@@ -192,7 +192,7 @@ export const servicePosts: Post[] = [
     description:
       "Before adding a floor to an existing house in Hyderabad, here is what a structural engineer checks: foundations, columns, cracks, concrete tests and strengthening options.",
     date: "2026-11-17",
-    image: "/img/projects/modern-apartment-complex.webp",
+    image: "/img/projects/mixed-use-commercial-building.webp",
     service: "structural-engineering",
     sections: [
       {
@@ -263,7 +263,7 @@ export const servicePosts: Post[] = [
     description:
       "Planning interiors for a new 2BHK or 3BHK flat: the right order of work, kitchen layout, plywood grades and finishes, wardrobes, lighting and common mistakes to avoid.",
     date: "2026-11-17",
-    image: "/img/services/interior-design.webp",
+    image: "/img/interiors/modern-living-room.webp",
     service: "interior-design",
     sections: [
       {
@@ -328,7 +328,7 @@ export const servicePosts: Post[] = [
     description:
       "Every stage of building an independent house in Hyderabad, from soil test and footings to slabs, curing, plastering and finishing, with the checks to insist on at each step.",
     date: "2026-11-17",
-    image: "/img/services/construction.webp",
+    image: "/img/projects/corporate-office-building.webp",
     service: "construction-renovation",
     sections: [
       {
@@ -405,7 +405,7 @@ export const servicePosts: Post[] = [
     description:
       "A plain guide for Hyderabad landowners considering a joint development agreement with a builder: sharing ratios, key clauses, approvals, RERA and tax points to discuss.",
     date: "2026-11-17",
-    image: "/img/projects/nvs-heights-tower.webp",
+    image: "/img/projects/designer-apartment-complex.webp",
     service: "builders-developers",
     sections: [
       {
@@ -466,7 +466,7 @@ export const servicePosts: Post[] = [
     description:
       "What to check before buying a plot in Hyderabad: a physical survey, boundaries, road width, lake buffer zones, layout approval, link documents, EC and Bhu Bharati records.",
     date: "2026-11-17",
-    image: "/img/services/plot-development.webp",
+    image: "/img/blog/plot-survey-checklist.webp",
     service: "land-surveying-plot-development",
     sections: [
       {
@@ -527,7 +527,7 @@ export const servicePosts: Post[] = [
     description:
       "How to design a house front elevation that looks good for years: orientation, shading, cladding, paint, ACP/HPL, glass, lighting and maintenance in Hyderabad's climate.",
     date: "2026-11-17",
-    image: "/img/projects/premium-duplex-villa.webp",
+    image: "/img/projects/contemporary-luxury-villa.webp",
     service: "building-elevation-design",
     sections: [
       {

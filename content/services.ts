@@ -300,8 +300,8 @@ export const services: Service[] = [
     metaDescription:
       "Bank-approved construction estimates and property valuations across Hyderabad & Telangana for home loans and project financing. BBMC since 1995.",
     h1: "Bank Loan Estimates & Property Valuations in Hyderabad",
-    image: "/img/services/architects-hyderabad-hero.webp",
-    imageAlt: "Building estimate and valuation documents prepared by BBMC",
+    image: "/img/projects/commercial-complex-with-retail.webp",
+    imageAlt: "Commercial complex with retail frontage, valued and estimated by BBMC engineers in Hyderabad",
     intro: [
       "Most banks need a professional construction estimate before sanctioning a home or construction loan. BBMC prepares clear, bank-approved estimates and property valuations to help secure your project financing.",
       "Because our estimates come from the same team that designs and engineers buildings, they are realistic, detailed and easy for both you and your bank to understand.",
