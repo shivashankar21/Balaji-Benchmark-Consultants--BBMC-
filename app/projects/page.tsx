@@ -19,14 +19,14 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHero crumbs={[{ name: "Projects", href: "/projects" }]} eyebrow="Portfolio" title="Our Projects & Interior Designs">
-        <p>500+ projects delivered since 1995, from independent homes and villas to residential towers, commercial complexes and convention halls.</p>
+        <p>1500+ projects delivered since 1995, from independent homes and villas to residential towers, commercial complexes and convention halls.</p>
       </PageHero>
       <section className="py-20"><Container><Portfolio showAll /></Container></section>
       <ProseSection
         muted
         title="Three decades of building across Telangana"
         paragraphs={[
-          "Since 1995 BBMC has designed and built more than 500 projects for over 3,000 clients. The work shown here is a selection: residential towers and apartment complexes, independent houses and duplex villas, mixed-use and commercial buildings, a convention hall, and interiors for homes, cafes and restaurants.",
+          "Since 1995 BBMC has designed and built more than 1500 projects for over 5,000 clients. The work shown here is a selection: residential towers and apartment complexes, independent houses and duplex villas, mixed-use and commercial buildings, a convention hall, and interiors for homes, cafes and restaurants.",
           "Every project is designed in-house by our architects and structural engineers, with Vaasthu built into the plan from the start. Many of our clients come to us for one service and return for the next: a house plan, then interiors, then a second building.",
         ]}
         list={[

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "BBMC, since 1995: builders, architects, structural engineers, interior designers & vastu consultants in Hyderabad & Telangana. 500+ projects.",
+    "BBMC, since 1995: builders, architects, structural engineers, interior designers & vastu consultants in Hyderabad & Telangana. 1500+ projects.",
   applicationName: "BBMC – Balaji Benchmark Consultants",
   authors: [{ name: "Balaji Benchmark Consultants (BBMC)" }],
   openGraph: {

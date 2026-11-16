@@ -129,8 +129,8 @@ export default async function LocationPage({ params }: Props) {
           <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-white/15 pt-8">
             {[
               ["30+", "Years"],
-              ["500+", "Projects"],
-              ["3000+", "Clients"],
+              ["1500+", "Projects"],
+              ["5000+", "Clients"],
             ].map(([v, k]) => (
               <div key={k}>
                 <dt className="sr-only">{k}</dt>

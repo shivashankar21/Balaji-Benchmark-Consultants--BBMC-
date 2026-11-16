@@ -67,12 +67,12 @@ export const site = {
   ],
   logo: "/img/bbmc-logo.png",
   logoSmall: "/img/bbmc-logo-240.webp", // header/footer (18 KB instead of 490 KB)
-  // Original stat text kept: "30+ Years of Excellence", "Vaasthu Compliant Designs", "3000+ Happy Clients", "500+ Projects Delivered".
+  // Original stat text kept: "30+ Years of Excellence", "Vaasthu Compliant Designs", "5000+ Happy Clients", "1500+ Projects Delivered".
   stats: [
     { count: 30, suffix: "+", unit: "Years", label: "of Excellence" },
     { count: 100, suffix: "%", unit: "Vaasthu Compliant", label: "Designs" },
-    { count: 3000, suffix: "+", unit: "", label: "Happy Clients" },
-    { count: 500, suffix: "+", unit: "", label: "Projects Delivered" },
+    { count: 5000, suffix: "+", unit: "", label: "Happy Clients" },
+    { count: 1500, suffix: "+", unit: "", label: "Projects Delivered" },
   ],
   areasServed: ["Hyderabad", "Secunderabad", "Telangana"],
 };
