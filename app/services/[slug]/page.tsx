@@ -11,7 +11,6 @@ import { getService, services } from "@/content/services";
 import { serviceExtra } from "@/content/service-extra";
 import { serviceKeywords } from "@/content/service-keywords";
 import { locations } from "@/content/locations";
-import { serviceAreaForService, serviceAreaHref } from "@/content/service-locations";
 import { SITE_URL } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -37,7 +36,6 @@ export default async function ServicePage({ params }: Props) {
   const s = getService((await params).slug);
   if (!s) notFound();
   const related = s.related.map((r) => services.find((x) => x.slug === r)!).filter(Boolean);
-  const areaPages = serviceAreaForService(s.slug);
   const extra = serviceExtra[s.slug];
   const faqs = [...s.faqs, ...(extra?.faqs ?? [])];
 
@@ -146,7 +144,7 @@ export default async function ServicePage({ params }: Props) {
             <h2 className="text-sm font-semibold uppercase tracking-widest text-ink-40">Available in</h2>
             <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
               {locations.map((l) => (
-                <li key={l.slug}><Link href={areaPages ? serviceAreaHref(areaPages.key, l) : `/${l.slug}`} className="link-underline text-ink-80 hover:text-brand-700">{l.area}</Link></li>
+                <li key={l.slug}><Link href={`/${l.slug}`} className="link-underline text-ink-80 hover:text-brand-700">{l.area}</Link></li>
               ))}
             </ul>
           </div>

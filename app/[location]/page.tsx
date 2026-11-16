@@ -11,28 +11,16 @@ import { Container, CtaBand } from "@/components/ui";
 import { areaHref, getLocation, locations } from "@/content/locations";
 import { services } from "@/content/services";
 import { defaultOgImage, site, whatsappLink } from "@/content/site";
-import ServiceLocationView, { SpecialistCards } from "@/components/ServiceLocationView";
-import { areaKey, getServiceLocationPage, serviceLocationPages } from "@/content/service-locations";
 
 type Props = { params: Promise<{ location: string }> };
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return [...locations.map((l) => ({ location: l.slug })), ...serviceLocationPages.map((p) => ({ location: p.slug }))];
+  return locations.map((l) => ({ location: l.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = (await params).location;
-  const sp = getServiceLocationPage(slug);
-  if (sp) {
-    return {
-      title: sp.seoTitle,
-      description: sp.metaDescription,
-      alternates: { canonical: `/${sp.slug}` },
-      openGraph: { url: `/${sp.slug}`, title: sp.seoTitle, description: sp.metaDescription, images: [defaultOgImage] },
-    };
-  }
-  const l = getLocation(slug);
+  const l = getLocation((await params).location);
   if (!l) return {};
   return {
     title: l.seoTitle,
@@ -43,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 // Search phrases grouped by what people are looking for. Shown in a collapsed panel (visible on click).
-const searchGroups = (name: string, key: string): { title: string; items: [string, string][] }[] => [
+const searchGroups = (name: string): { title: string; items: [string, string][] }[] => [
   {
     title: "Builders & construction",
     items: [
@@ -62,8 +50,8 @@ const searchGroups = (name: string, key: string): { title: string; items: [strin
     title: "Architecture & engineering",
     items: [
       [`Architects in ${name}`, "architectural-design"],
-      [`Civil engineers in ${name}`, `/civil-engineers-in-${key}`],
-      [`Structural engineer in ${name}`, `/civil-engineers-in-${key}`],
+      [`Civil engineers in ${name}`, "structural-engineering"],
+      [`Structural engineer in ${name}`, "structural-engineering"],
       [`Building planners in ${name}`, "architectural-design"],
       [`House plans in ${name}`, "architectural-design"],
       [`Duplex house design in ${name}`, "architectural-design"],
@@ -73,11 +61,11 @@ const searchGroups = (name: string, key: string): { title: string; items: [strin
   {
     title: "Vastu & interiors",
     items: [
-      [`Vastu consultant in ${name}`, `/vastu-consultants-in-${key}`],
-      [`Vastu expert in ${name}`, `/vastu-consultants-in-${key}`],
-      [`Interior designers in ${name}`, `/interior-designers-in-${key}`],
-      [`Home interiors in ${name}`, `/interior-designers-in-${key}`],
-      [`Modular kitchen in ${name}`, `/interior-designers-in-${key}`],
+      [`Vastu consultant in ${name}`, "vastu-consultation"],
+      [`Vastu expert in ${name}`, "vastu-consultation"],
+      [`Interior designers in ${name}`, "interior-design"],
+      [`Home interiors in ${name}`, "interior-design"],
+      [`Modular kitchen in ${name}`, "interior-design"],
     ],
   },
   {
@@ -102,14 +90,11 @@ const heroImageFor = (slug: string) => {
 };
 
 export default async function LocationPage({ params }: Props) {
-  const slug = (await params).location;
-  const sp = getServiceLocationPage(slug);
-  if (sp) return <ServiceLocationView page={sp} />;
-  const l = getLocation(slug);
+  const l = getLocation((await params).location);
   if (!l) notFound();
   const name = l.area.split(" (")[0];
   const nearby = locations.filter((x) => x.slug !== l.slug && l.nearby.includes(x.area));
-  const groups = searchGroups(name, areaKey(l));
+  const groups = searchGroups(name);
   const linkedAreas = l.areas?.filter((a) => areaHref(a, l.slug) !== `/${l.slug}`) ?? [];
   const otherAreas = l.areas?.filter((a) => !linkedAreas.includes(a)) ?? [];
 
@@ -222,17 +207,6 @@ export default async function LocationPage({ params }: Props) {
         </section>
       )}
 
-      {/* ---------- Specialists in this area ---------- */}
-      <section className="pb-20 lg:pb-24">
-        <Container>
-          <div className="max-w-2xl" data-reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Find a specialist</p>
-            <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">Civil engineers, vastu consultants &amp; interior designers in {name}</h2>
-          </div>
-          <SpecialistCards l={l} name={name} exclude="architects" />
-        </Container>
-      </section>
-
       {/* ---------- Services ---------- */}
       <section className="bg-mist py-20 lg:py-24">
         <Container>
@@ -301,7 +275,7 @@ export default async function LocationPage({ params }: Props) {
                   <ul className="mt-3 space-y-2 text-sm">
                     {g.items.map(([label, slug]) => (
                       <li key={label}>
-                        <Link href={slug.startsWith("/") ? slug : `/services/${slug}`} className="link-underline text-ink-60 hover:text-brand-700">{label}</Link>
+                        <Link href={`/services/${slug}`} className="link-underline text-ink-60 hover:text-brand-700">{label}</Link>
                       </li>
                     ))}
                   </ul>
