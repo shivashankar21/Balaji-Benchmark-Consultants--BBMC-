@@ -11,6 +11,7 @@ import { getService, services } from "@/content/services";
 import { serviceExtra } from "@/content/service-extra";
 import { serviceKeywords } from "@/content/service-keywords";
 import { locations } from "@/content/locations";
+import { posts } from "@/content/blog";
 import { SITE_URL } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServicePage({ params }: Props) {
   const s = getService((await params).slug);
   if (!s) notFound();
+  const articles = posts.filter((p) => p.service === s.slug);
   const related = s.related.map((r) => services.find((x) => x.slug === r)!).filter(Boolean);
   const extra = serviceExtra[s.slug];
   const faqs = [...s.faqs, ...(extra?.faqs ?? [])];
@@ -139,6 +141,16 @@ export default async function ServicePage({ params }: Props) {
                 <li key={r.slug}><Link href={`/services/${r.slug}`} className="link-underline font-display font-semibold text-ink hover:text-brand-700">{r.title}</Link></li>
               ))}
             </ul>
+            {articles.length > 0 && (
+              <>
+                <h2 className="mt-10 text-sm font-semibold uppercase tracking-widest text-ink-40">From our blog</h2>
+                <ul className="mt-4 space-y-3">
+                  {articles.map((a) => (
+                    <li key={a.slug}><Link href={`/blog/${a.slug}`} className="link-underline text-ink-80 hover:text-brand-700">{a.title}</Link></li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
           <div data-reveal>
             <h2 className="text-sm font-semibold uppercase tracking-widest text-ink-40">Available in</h2>

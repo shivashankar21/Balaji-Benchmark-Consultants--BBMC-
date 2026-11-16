@@ -4,10 +4,14 @@ export type Post = {
   description: string;
   date: string;
   image: string;
+  /** Slug of the service this post relates to (adds a link to it). */
+  service?: string;
   sections: { heading: string; body: string[]; list?: string[] }[];
 };
 
-export const posts: Post[] = [
+import { servicePosts } from "./blog-services";
+
+const basePosts: Post[] = [
   {
     slug: "vastu-tips-for-east-facing-house",
     title: "Vastu Tips for an East-Facing House: A Practical Guide",
@@ -15,6 +19,7 @@ export const posts: Post[] = [
       "Where to place the main door, kitchen, master bedroom and puja room in an east-facing house, explained simply by BBMC's Vaasthu consultants in Hyderabad.",
     date: "2026-11-13",
     image: "/img/services/vastu-consultation.webp",
+    service: "vastu-consultation",
     sections: [
       {
         heading: "Why east-facing houses are popular",
@@ -75,6 +80,7 @@ export const posts: Post[] = [
       "An overview of the building permission process in Hyderabad: which authority applies, the documents you typically need, and how architects help.",
     date: "2026-11-13",
     image: "/img/services/architectural-design.webp",
+    service: "building-permission-approvals",
     sections: [
       {
         heading: "Which authority approves your plan?",
@@ -144,6 +150,7 @@ export const posts: Post[] = [
       "What a construction estimate for a home loan contains, why banks ask for it and how to get one prepared in Hyderabad.",
     date: "2026-11-13",
     image: "/img/services/construction.webp",
+    service: "estimates-valuations",
     sections: [
       {
         heading: "Why banks ask for an estimate",
@@ -189,5 +196,7 @@ export const posts: Post[] = [
     ],
   },
 ];
+
+export const posts: Post[] = [...servicePosts, ...basePosts];
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
