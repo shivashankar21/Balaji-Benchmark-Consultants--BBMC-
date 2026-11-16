@@ -94,6 +94,7 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  onClick={() => setOpen(false)}
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={`block rounded-md px-3 py-3 text-base font-medium ${
                     isActive(item.href) ? "bg-brand-50 text-brand-700" : "text-ink-80 hover:bg-mist"

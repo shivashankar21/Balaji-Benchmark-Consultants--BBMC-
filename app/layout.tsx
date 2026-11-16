@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import RevealObserver from "@/components/RevealObserver";
+import HashScroll from "@/components/HashScroll";
 import { JsonLd, businessSchema, websiteSchema } from "@/components/seo";
 import { SITE_URL, defaultOgImage } from "@/content/site";
 import "./globals.css";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FloatingActions />
         <RevealObserver />
+        <HashScroll />
         <JsonLd data={businessSchema()} />
         <JsonLd data={websiteSchema()} />
       </body>
