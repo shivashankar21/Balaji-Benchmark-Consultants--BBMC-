@@ -4,6 +4,7 @@ export const dynamic = "force-static";
 import { SITE_URL, site } from "@/content/site";
 import { services } from "@/content/services";
 import { locations } from "@/content/locations";
+import { serviceLocationPages } from "@/content/service-locations";
 import { posts } from "@/content/blog";
 import { heroSlides, interiors, projects } from "@/content/home";
 
@@ -29,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/services", 0.9, "monthly", services.map((s) => s.image)),
     ...services.map((s) => page(`/services/${s.slug}`, 0.9, "monthly", [s.image])),
     ...locations.map((l) => page(`/${l.slug}`, l.areas ? 0.8 : 0.7)),
+    ...serviceLocationPages.map((p) => page(`/${p.slug}`, 0.6)),
     page("/locations", 0.8),
     page("/projects", 0.8, "monthly", [...projects, ...interiors].map((p) => p.image)),
     page("/about", 0.7, "monthly", [site.founder.image]),

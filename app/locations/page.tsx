@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { Container, CtaBand } from "@/components/ui";
 import { areaHref, hotspots, hyderabadLocations, telanganaLocations, zoneLocations, type Location } from "@/content/locations";
+import { serviceAreaHref, serviceAreas } from "@/content/service-locations";
 
 export const metadata: Metadata = {
   title: "Areas We Serve | Architects Across Hyderabad & Telangana | BBMC",
@@ -17,11 +18,18 @@ function AreaList({ items }: { items: Location[] }) {
   return (
     <ul className="mt-8 grid gap-x-10 md:grid-cols-2">
       {items.map((l) => (
-        <li key={l.slug} data-reveal>
-          <Link href={`/${l.slug}`} className="group block border-b border-line py-6">
+        <li key={l.slug} data-reveal className="border-b border-line py-6">
+          <Link href={`/${l.slug}`} className="group block">
             <h3 className="font-display text-lg font-bold text-ink transition-colors group-hover:text-brand-700">Architects in {l.area}</h3>
             <p className="mt-2 line-clamp-2 text-ink-60">{l.intro[0]}</p>
           </Link>
+          <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+            {serviceAreas.map((sa) => (
+              <Link key={sa.key} href={serviceAreaHref(sa.key, l)} className="link-underline font-medium text-brand-700 hover:text-brand-800">
+                {sa.label}
+              </Link>
+            ))}
+          </p>
         </li>
       ))}
     </ul>
